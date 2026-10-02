@@ -103,6 +103,15 @@ Etiquetas: `[fix]` `[feat]` `[docs]` `[decisión]` `[nota]`
   poder marcar que algo quedó en borrador.
 - [decisión] Los RF de la plantilla son ejemplos a borrar, no casillas
   obligatorias. Una spec puede quedar con un solo `RF-1`.
+- [nota] La carpeta `.git` tiene el atributo `Hidden` de Windows: ni el Explorador
+  ni el explorador de VS Code la muestran. `attrib -h .git` para verla.
+- [feat] Remoto `origin` agregado: `https://github.com/Victorstarkman/biblioteca.git`.
+  Rama `master` renombrada a `main` y los 8 commits subidos. `README.md` quedó
+  intacto: el repo ya existía y **no** hizo falta `git init` ni un commit
+  "first commit".
+- [nota] Trampa de WSL: `echo "texto" >> archivo` dentro de `powershell.exe` usa el
+  redireccionador de PowerShell, no el de bash, y en PS 5.1 escribe en UTF-16
+  (archivo corrupto). Para anexar texto usar `Add-Content -Encoding UTF8`.
 - [nota] `git` no está instalado en WSL, solo en Windows. Para commitear hay que
   usar `powershell.exe -NoProfile -Command "git ..."` con la ruta `C:\...`. Por eso
   el entorno reporta "Is directory a git repo: no" aunque `.git` sí existe.
