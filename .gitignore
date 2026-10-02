@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+memory.md
+*.log
+npm-debug.log*
+.DS_Store
+.vite/
