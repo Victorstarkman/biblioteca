@@ -8,6 +8,7 @@
 
 ## Reglas de trabajo
 
+- Lee `docs/constitution.md` y la spec activa (`specs/NNN-*/`) antes de tocar código.
 - **Confirmar antes de cambiar.** No modificar archivos sin aprobación explícita.
 - Avisar qué archivos se van a tocar y esperar confirmación.
 - Ante la duda, preguntar antes de actuar.
