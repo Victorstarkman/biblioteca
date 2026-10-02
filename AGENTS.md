@@ -42,6 +42,7 @@ npm start            # API + SPA compilada en :3000
 ```
 
 - **No existe `npm test`, ni lint, ni typecheck.** No inventarlos.
+- **Verificación después de cambios:** Después de cada cambio, verifica con el MCP de Chrome DevTools: abre `index.html`, prueba la funcionalidad, revisa la consola y comprueba la vista móvil.
 - Verificación disponible: `npm run build` + pruebas manuales contra la API.
 
 ## Entorno (WSL ↔ Windows)
