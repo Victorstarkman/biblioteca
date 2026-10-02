@@ -11,6 +11,7 @@
 - **Confirmar antes de cambiar.** No modificar archivos sin aprobación explícita.
 - Avisar qué archivos se van a tocar y esperar confirmación.
 - Ante la duda, preguntar antes de actuar.
+- **Commits tras aprobar tarea.** Cuando una tarea termina y cuenta con mi aprobación explícita, se debe hacer un commit con mensaje en español siguiendo el estilo del repo. Si hay cambios pendientes en memory.md también se incluyen en ese commit (o se asegura de que estén escritos antes del commit). No se hace commit sin mi aprobación.
 
 ## Memoria (`memory.md`)
 
