@@ -112,6 +112,9 @@ Etiquetas: `[fix]` `[feat]` `[docs]` `[decisión]` `[nota]`
 - [nota] Trampa de WSL: `echo "texto" >> archivo` dentro de `powershell.exe` usa el
   redireccionador de PowerShell, no el de bash, y en PS 5.1 escribe en UTF-16
   (archivo corrupto). Para anexar texto usar `Add-Content -Encoding UTF8`.
+- [docs] `specs/001-editoriales/spec.md`: editorial como catálogo cerrado (no texto
+  suelto), con filtro, orden y búsqueda. 11 RF en EARS, 5 dudas abiertas sin
+  resolver. La spec no define implementación: eso va en el plan aparte.
 - [nota] `git` no está instalado en WSL, solo en Windows. Para commitear hay que
   usar `powershell.exe -NoProfile -Command "git ..."` con la ruta `C:\...`. Por eso
   el entorno reporta "Is directory a git repo: no" aunque `.git` sí existe.
