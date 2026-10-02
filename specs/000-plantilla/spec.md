@@ -1,34 +1,62 @@
-# NNN — Título de la spec
+# Spec NNN — <Nombre de la funcionalidad>
 
 - **Estado:** borrador | activa | cerrada
 - **Fecha:** AAAA-MM-DD
 
-## Problema
+## Contexto y objetivo
 
-Qué falta hoy y por qué hace falta. Sin esto no se toca código.
+<Qué problema resuelve y por qué merece la pena. Un párrafo.>
 
-## Regla de negocio
+## Usuarios / actores
 
-Descripción precisa, en una frase por caso. Evitar "se hace lo razonable".
+<Quién lo usa.>
 
-## Casos borde
+## Historias de usuario
 
-| Entrada | Resultado esperado | Código |
-| --- | --- | --- |
-| … | … | 200 / 422 / 404 |
+- H1: Como <rol> quiero <acción> para <beneficio>.
 
-## Alcance técnico
+## Requisitos funcionales (criterios de aceptación en EARS)
 
-- **API:** rutas y endpoints afectados.
-- **Validación:** qué valida `server/lib/validar.js`.
-- **BD:** cambios de esquema en `schema.sql` **y** en el array `cambios` de
-  `server/scripts/migrate.js` (si los hay).
-- **UI:** pantallas afectadas y qué muestran los `.jsx` (solo llaman a la API).
+- RF-1: CUANDO <evento>, EL SISTEMA <respuesta> (salida/resultado esperado).
+- RF-2: SI <condición no deseada>, ENTONCES EL SISTEMA <respuesta>.
+- RF-3: MIENTRAS <estado>, EL SISTEMA <respuesta>.
+- RF-4: EL SISTEMA <comportamiento permanente>.
+
+## Requisitos no funcionales
+
+<Solo los que apliquen: rendimiento, seguridad, plataformas, idioma...>
+
+## Casos límite
+
+<Vacíos, duplicados, datos corruptos, límites, concurrencia...>
 
 ## Fuera de alcance
 
-Lo que explícitamente no se hace en esta spec.
+<Lo que explícitamente NO se hace en esta iteración.>
+
+## Criterios de finalización
+
+<Todos los RF verificados con `npm run build`, pruebas manuales contra la API y
+Chrome DevTools MCP (abrir `index.html`, funcionalidad, consola y vista móvil).
+Sin tests automatizados: el proyecto no tiene dependencias de test.>
+
+## Dudas abiertas
+
+- [NECESITA ACLARACIÓN] <duda>
+
+---
+
+<!-- Anexos: secciones específicas de este repo. Completar o borrar si no aplican. -->
+
+## Alcance técnico
+
+- **API:** <rutas y endpoints afectados>
+- **Validación:** <qué valida `server/lib/validar.js`>
+- **BD:** <cambios en `schema.sql` y en el array `cambios` de
+  `server/scripts/migrate.js`; "ninguno" si no aplica>
+- **UI:** <pantallas afectadas. Los `.jsx` solo muestran y llaman a la API.>
 
 ## Dependencias
 
-Dependencias nuevas (con justificación en `memory.md`, principio 1) o `ninguna`.
+<Ninguna, o la nueva dependencia + justificación en `memory.md`
+(principio 1 de `docs/constitution.md`).>

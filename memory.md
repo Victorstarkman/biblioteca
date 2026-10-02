@@ -88,6 +88,21 @@ Etiquetas: `[fix]` `[feat]` `[docs]` `[decisión]` `[nota]`
 - [docs] `specs/README.md` con la convención de specs y `specs/000-plantilla/spec.md`
   como plantilla. La primera spec real (`001-*`) todavía no existe: hay que definir
   de qué feature va a ser.
+- [docs] Plantilla de spec reescrita con la estructura genérica (contexto, actores,
+  historias, RF en EARS, no funcionales, casos límite, fuera de alcance, criterios
+  de finalización, dudas abiertas) más los anexos de `Alcance técnico` y
+  `Dependencias`.
+- [decisión] Los dos anexos van aparte del bloque central: son específicos de este
+  repo (la trampa de tocar `schema.sql` **y** el array `cambios` de
+  `migrate.js`, y el principio 1 de justificar dependencias en `memory.md`).
+- [decisión] `Criterios de finalización` habla de `npm run build`, pruebas manuales
+  y Chrome DevTools MCP, no de "tests en verde": el proyecto no tiene dependencias
+  de test (principio 4) y ese ejemplo era imposible de cumplir.
+- [decisión] Se conservan `Estado` y `Fecha` bajo el título: `Estado` distingue
+  borrador de cerrada y "la spec activa es la de número más alto" no funciona sin
+  poder marcar que algo quedó en borrador.
+- [decisión] Los RF de la plantilla son ejemplos a borrar, no casillas
+  obligatorias. Una spec puede quedar con un solo `RF-1`.
 - [nota] `git` no está instalado en WSL, solo en Windows. Para commitear hay que
   usar `powershell.exe -NoProfile -Command "git ..."` con la ruta `C:\...`. Por eso
   el entorno reporta "Is directory a git repo: no" aunque `.git` sí existe.

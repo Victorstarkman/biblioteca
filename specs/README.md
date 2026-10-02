@@ -16,12 +16,26 @@ Cada carpeta `NNN-nombre/` es una spec: la definición de una regla de negocio
 
 ## Antes de implementar
 
-La spec tiene que responder, como mínimo:
+La spec sigue la plantilla de `000-plantilla/spec.md`. Las secciones y para qué
+sirven:
 
-1. **Qué** regla de negocio se agrega o cambia.
-2. **Por qué** hace falta.
-3. **Casos borde** y qué se rechaza (código de error esperado).
-4. **Dónde** vive la lógica (rutas, validación, esquema de BD, UI).
+| Sección | Para qué |
+| --- | --- |
+| Contexto y objetivo | Qué problema resuelve y por qué merece la pena. |
+| Usuarios / actores | Quién lo usa. |
+| Historias de usuario | La necesidad desde el punto de vista de quien la tiene. |
+| Requisitos funcionales | Los RF en notación EARS: `CUANDO`, `SI/ENTONCES`, `MIENTRAS`, `EL SISTEMA`. |
+| Requisitos no funcionales | Rendimiento, seguridad, plataformas, idioma. Solo si aplican. |
+| Casos límite | Vacíos, duplicados, datos corruptos, límites, concurrencia. |
+| Fuera de alcance | Lo que explícitamente no se hace en esta iteración. |
+| Criterios de finalización | Cómo se verifica que está terminado. Sin tests automatizados. |
+| Dudas abiertas | Lo que hay que aclarar antes de codear. |
+| Alcance técnico | Rutas, validación, esquema de BD y pantallas. |
+| Dependencias | Si se agrega alguna. Se justifica en `memory.md`. |
+
+Los RF de la plantilla son **ejemplos a borrar**, no casillas obligatorias: si
+una spec solo necesita un comportamiento permanente, se queda con un `RF-1: EL
+SISTEMA ...` y borra el resto.
 
 Si al implementar aparece una decisión que la spec no cubre, se actualiza la
 spec y se anota en `memory.md` antes de seguir con el código.
